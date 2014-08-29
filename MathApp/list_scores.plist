@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Minus</key>
+	<array>
+		<string>a-b=c</string>
+		<string>aa-bb=c</string>
+		<string>aaa-bbb=c</string>
+		<string>a+b-c=d</string>
+		<string>aa+bb-cc=d</string>
+		<string>a-b+c-d=e</string>
+		<string>aa-bb+cc-dd=e</string>
+	</array>
+	<key>Add</key>
+	<array>
+		<string>a+b=c</string>
+		<string>aa+bb=c</string>
+		<string>aaa+bbb=c</string>
+		<string>a+b+c=d</string>
+		<string>aa+bb+cc=d</string>
+		<string>a+b+c+d=e</string>
+		<string>aa+bb+cc+dd=e</string>
+	</array>
+	<key>Multiply</key>
+	<array>
+		<string>a*b=c</string>
+		<string>aa*b=c</string>
+		<string>aaa*b=c</string>
+		<string>aa*bb=c</string>
+		<string>a*b*c=d</string>
+		<string>aa*b*c=d</string>
+	</array>
+	<key>Division</key>
+	<array>
+		<string>aa/b=c</string>
+		<string>aaa/b=c</string>
+		<string>aaaa/bb=c</string>
+		<string>aaaaa/bb=c</string>
+		<string>aaaaaa/bbb=c</string>
+	</array>
+</dict>
+</plist>

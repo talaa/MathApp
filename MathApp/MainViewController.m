@@ -7,6 +7,9 @@
 //
 
 #import "MainViewController.h"
+#import "DetailoperationsTableViewController.h"
+#import "tempObjects.h"
+
 
 @interface MainViewController ()
 
@@ -17,6 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title=[NSString stringWithFormat:@"Hi %@",[tempObjects currentusername]];
+    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"square-grid-small"]];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -53,6 +58,52 @@
             popoverController.delegate = self;
         }
     }
+    if ([[segue identifier] isEqualToString:@"plusdetailsegue"]) {
+        //[[segue destinationViewController] setDelegate:self];
+        DetailoperationsTableViewController *detailcontroller=(DetailoperationsTableViewController*)[segue destinationViewController];
+        detailcontroller.title=@"Add";
+        NSMutableDictionary *basicdic=[[NSMutableDictionary alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"list_scores" ofType:@"plist"]];
+        NSArray *basicarray=[[NSArray alloc]initWithArray:[basicdic objectForKey:@"Add"]];
+        NSLog(@"The array is %@",basicarray);
+        [tempObjects setmainarray:basicarray];
+        //[self presentViewController:detailcontroller animated:YES completion:nil];
+        
+    }
+    if ([[segue identifier] isEqualToString:@"minusdetailsegue"]) {
+        //[[segue destinationViewController] setDelegate:self];
+        DetailoperationsTableViewController *detailcontroller=(DetailoperationsTableViewController*)[segue destinationViewController];
+        detailcontroller.title=@"Minus";
+        NSMutableDictionary *basicdic=[[NSMutableDictionary alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"list_scores" ofType:@"plist"]];
+        NSArray *basicarray=[[NSArray alloc]initWithArray:[basicdic objectForKey:@"Minus"]];
+        NSLog(@"The array is %@",basicarray);
+        [tempObjects setmainarray:basicarray];
+        //[self presentViewController:detailcontroller animated:YES completion:nil];
+        
+    }
+    if ([[segue identifier] isEqualToString:@"multiplydetailsegue"]) {
+        //[[segue destinationViewController] setDelegate:self];
+        DetailoperationsTableViewController *detailcontroller=(DetailoperationsTableViewController*)[segue destinationViewController];
+        detailcontroller.title=@"Multiply";
+        NSMutableDictionary *basicdic=[[NSMutableDictionary alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"list_scores" ofType:@"plist"]];
+        NSArray *basicarray=[[NSArray alloc]initWithArray:[basicdic objectForKey:@"Multiply"]];
+        NSLog(@"The array is %@",basicarray);
+        [tempObjects setmainarray:basicarray];
+        //[self presentViewController:detailcontroller animated:YES completion:nil];
+        
+    }
+    
+    if ([[segue identifier] isEqualToString:@"divisiondetailsegue"]) {
+        //[[segue destinationViewController] setDelegate:self];
+        DetailoperationsTableViewController *detailcontroller=(DetailoperationsTableViewController*)[segue destinationViewController];
+        detailcontroller.title=@"Division";
+        NSMutableDictionary *basicdic=[[NSMutableDictionary alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"list_scores" ofType:@"plist"]];
+        NSArray *basicarray=[[NSArray alloc]initWithArray:[basicdic objectForKey:@"Division"]];
+        NSLog(@"The array is %@",basicarray);
+        [tempObjects setmainarray:basicarray];
+        //[self presentViewController:detailcontroller animated:YES completion:nil];
+        
+    }
+    
 }
 
 - (IBAction)togglePopover:(id)sender

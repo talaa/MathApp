@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Scorecards" representedClassName="Scorecards" syncable="YES">
+        <attribute name="opeerationlevel" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="operationtype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scoredate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="timetocomplete" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userscore" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="ScoreHistory" syncable="YES">
+        <attribute name="operation_level" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="operation_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scoredate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="time_to_complete" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="user_score" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Users" representedClassName="Users" syncable="YES">
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Scorecards" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="ScoreHistory" positionX="-54" positionY="36" width="128" height="135"/>
+        <element name="Users" positionX="-63" positionY="27" width="128" height="60"/>
+    </elements>
+</model>

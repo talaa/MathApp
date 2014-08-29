@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#define KDademail @"Dad's Email:"
+#define KMumemail @"Mum's Email:"
 
 @class FlipsideViewController;
 

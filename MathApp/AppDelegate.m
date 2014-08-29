@@ -13,6 +13,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"users_scores"];
+    //note: iOS only allows one crash reporting tool per app; if using another, set to: NO
+    [Flurry setCrashReportingEnabled:YES];
+    
+    // Replace YOUR_API_KEY with the api key in the downloaded package
+    [Flurry startSession:@"WGQJWJ4DDV9PCQVMZ6DD"];
     return YES;
 }
 							

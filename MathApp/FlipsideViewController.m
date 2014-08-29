@@ -23,6 +23,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    if ([[defaults objectForKey:KDademail] isEqualToString:@""]&&[[defaults objectForKey:KMumemail] isEqualToString:@""]) {
+        UIAlertView *noemailview=[[UIAlertView alloc]initWithTitle:@"Emails are empty" message:@"OOOPS you have fogotten to put any emails to inform the parents" delegate:self cancelButtonTitle:nil otherButtonTitles:@"GO TO Settings -->", nil];
+        [noemailview show];
+    }
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -38,5 +43,11 @@
 {
     [self.delegate flipsideViewControllerDidFinish:self];
 }
+- (IBAction)unwindToA:(UIStoryboardSegue *)segue
+{
+    //returning to A
+    //[self performSegueWithIdentifier:@"back" sender:self];
+}
+
 
 @end

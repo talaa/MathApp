@@ -13,4 +13,9 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    //#define MR_SHORTHAND
+//#define MR_LOGGING_ENABLED 1
+#import "CoreData+MagicalRecord.h"
+    
 #endif
