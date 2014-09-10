@@ -101,7 +101,7 @@
             if ([[tempObjects usersarray]count]<=noofusers ) {
                 self.enternewname.text=@"";
             self.enternewname.enabled=YES;
-                
+                saveme_go.enabled=YES;
             NSLog(@"I am starting as existing User");
             self.enternewname.inputView=picker1;
                 

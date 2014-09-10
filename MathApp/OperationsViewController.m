@@ -206,7 +206,7 @@
         nextbutton.enabled=NO;
     UIAlertView *endoflinealert=[[UIAlertView alloc]initWithTitle:@"Done !" message:@"You have finished 10 tests of this level" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Send mail to parent", nil];
     [endoflinealert show];
-        NSLog(@"The type is %@ & the level is %i",[tempObjects tempoarray][[tempObjects indexrow]],[tempObjects indexrow]);
+        //NSLog(@"The type is %@ & the level is %i",[tempObjects tempoarray][[tempObjects indexrow]],[tempObjects indexrow]);
         if (recordavailable) {
             Scorecards *modifyrecord=therecord[0];
             modifyrecord.userscore=[NSNumber numberWithInt:internalscore];
