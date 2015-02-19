@@ -36,6 +36,8 @@
 		6957F90B19A245FF00925DA3 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957F8ED19A245FF00925DA3 /* MagicalRecord.m */; };
 		6957F90D19A2464900925DA3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6957F90C19A2464900925DA3 /* CoreData.framework */; };
 		6957F91019A24B0700925DA3 /* users_scores.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6957F90E19A24B0700925DA3 /* users_scores.xcdatamodeld */; };
+		6959EC3C1A9648B100A082F4 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6959EC3A1A9648B100A082F4 /* StartApp.framework */; };
+		6959EC3D1A9648B100A082F4 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6959EC3B1A9648B100A082F4 /* StartApp.bundle */; };
 		696DED2519A278D3008310A5 /* Scorecards.m in Sources */ = {isa = PBXBuildFile; fileRef = 696DED2419A278D3008310A5 /* Scorecards.m */; };
 		696DED2919A3AA08008310A5 /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 696DED2819A3AA08008310A5 /* Users.m */; };
 		6983FF09199BC98300CFCBA5 /* tempObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 6983FF08199BC98300CFCBA5 /* tempObjects.m */; };
@@ -77,6 +79,8 @@
 		69A6B1FA199EA78D00FF224E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 69A6B1F9199EA78D00FF224E /* Settings.bundle */; };
 		69A6B1FD199EB6AB00FF224E /* SigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A6B1FC199EB6AB00FF224E /* SigninViewController.m */; };
 		69AAC57F19AE3991001845FF /* StoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AAC57E19AE3991001845FF /* StoreTableViewController.m */; };
+		69B73C2C19D5EE500079C2EA /* cheering.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69B73C2B19D5EE500079C2EA /* cheering.mp3 */; };
+		69B73C2F19D5EE750079C2EA /* PlayMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B73C2E19D5EE750079C2EA /* PlayMusic.m */; };
 		69C8E8AA19A8DADF005B0EB8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C8E8A919A8DADF005B0EB8 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +155,8 @@
 		6957F8F119A245FF00925DA3 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
 		6957F90C19A2464900925DA3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6957F90F19A24B0700925DA3 /* users_scores.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = users_scores.xcdatamodel; sourceTree = "<group>"; };
+		6959EC3A1A9648B100A082F4 /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
+		6959EC3B1A9648B100A082F4 /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
 		696DED2319A278D3008310A5 /* Scorecards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scorecards.h; sourceTree = "<group>"; };
 		696DED2419A278D3008310A5 /* Scorecards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scorecards.m; sourceTree = "<group>"; };
 		696DED2719A3AA08008310A5 /* Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Users.h; sourceTree = "<group>"; };
@@ -239,6 +245,9 @@
 		69A6B1FC199EB6AB00FF224E /* SigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewController.m; sourceTree = "<group>"; };
 		69AAC57D19AE3991001845FF /* StoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTableViewController.h; sourceTree = "<group>"; };
 		69AAC57E19AE3991001845FF /* StoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTableViewController.m; sourceTree = "<group>"; };
+		69B73C2B19D5EE500079C2EA /* cheering.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cheering.mp3; sourceTree = "<group>"; };
+		69B73C2D19D5EE750079C2EA /* PlayMusic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayMusic.h; sourceTree = "<group>"; };
+		69B73C2E19D5EE750079C2EA /* PlayMusic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayMusic.m; sourceTree = "<group>"; };
 		69C8E8A919A8DADF005B0EB8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -250,6 +259,7 @@
 				699563F819AD31CB005078B0 /* SystemConfiguration.framework in Frameworks */,
 				699563F619AD31AE005078B0 /* CoreTelephony.framework in Frameworks */,
 				699563F419AD3199005078B0 /* AVFoundation.framework in Frameworks */,
+				6959EC3C1A9648B100A082F4 /* StartApp.framework in Frameworks */,
 				699563F219AD318E005078B0 /* AudioToolbox.framework in Frameworks */,
 				699563F019AD3180005078B0 /* AdSupport.framework in Frameworks */,
 				69C8E8AA19A8DADF005B0EB8 /* StoreKit.framework in Frameworks */,
@@ -390,6 +400,15 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		6959EC391A96488A00A082F4 /* 3rd party */ = {
+			isa = PBXGroup;
+			children = (
+				6959EC3A1A9648B100A082F4 /* StartApp.framework */,
+				6959EC3B1A9648B100A082F4 /* StartApp.bundle */,
+			);
+			name = "3rd party";
+			sourceTree = "<group>";
+		};
 		69908D461997A95400E78A12 = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +451,8 @@
 		69908D581997A95400E78A12 /* MathApp */ = {
 			isa = PBXGroup;
 			children = (
+				6959EC391A96488A00A082F4 /* 3rd party */,
+				69B73C3019D5EE860079C2EA /* Music */,
 				699563F919AD37B9005078B0 /* Flurry */,
 				699563CB19AD30F2005078B0 /* GoogleMobileAdsSdkiOS-6.11.1 */,
 				69C8E8A219A87C65005B0EB8 /* operations */,
@@ -578,6 +599,16 @@
 			path = Flurry;
 			sourceTree = "<group>";
 		};
+		69B73C3019D5EE860079C2EA /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				69B73C2D19D5EE750079C2EA /* PlayMusic.h */,
+				69B73C2E19D5EE750079C2EA /* PlayMusic.m */,
+				69B73C2B19D5EE500079C2EA /* cheering.mp3 */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
 		69C8E8A219A87C65005B0EB8 /* operations */ = {
 			isa = PBXGroup;
 			children = (
@@ -678,8 +709,10 @@
 				69908D711997A95400E78A12 /* Images.xcassets in Resources */,
 				69908D661997A95400E78A12 /* Main_iPhone.storyboard in Resources */,
 				69A6B1FA199EA78D00FF224E /* Settings.bundle in Resources */,
+				6959EC3D1A9648B100A082F4 /* StartApp.bundle in Resources */,
 				699563EE19AD30F2005078B0 /* README.txt in Resources */,
 				69908D5D1997A95400E78A12 /* InfoPlist.strings in Resources */,
+				69B73C2C19D5EE500079C2EA /* cheering.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,6 +734,7 @@
 				6957F8FF19A245FF00925DA3 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
 				69A6B1FD199EB6AB00FF224E /* SigninViewController.m in Sources */,
 				6983FF0E199C0D7600CFCBA5 /* OperationsViewController.m in Sources */,
+				69B73C2F19D5EE750079C2EA /* PlayMusic.m in Sources */,
 				6957F90919A245FF00925DA3 /* MagicalRecord+Setup.m in Sources */,
 				6957F90019A245FF00925DA3 /* NSManagedObjectContext+MagicalSaves.m in Sources */,
 				69908D631997A95400E78A12 /* AppDelegate.m in Sources */,
@@ -832,7 +866,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -865,7 +899,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -879,6 +913,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tamer Alaa (6VJ733SKX8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tamer Alaa (6VJ733SKX8)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MathApp",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathApp/MathApp-Prefix.pch";
 				INFOPLIST_FILE = "MathApp/MathApp-Info.plist";
@@ -889,7 +927,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b6209b82-10d0-487f-a7ab-c31c06ff8c23";
+				PROVISIONING_PROFILE = "979109b6-54ff-433f-b286-24ff1a4ef81f";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -901,6 +939,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tamer Alaa (6VJ733SKX8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tamer Alaa (6VJ733SKX8)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MathApp",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathApp/MathApp-Prefix.pch";
 				INFOPLIST_FILE = "MathApp/MathApp-Info.plist";
@@ -911,7 +953,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b6209b82-10d0-487f-a7ab-c31c06ff8c23";
+				PROVISIONING_PROFILE = "979109b6-54ff-433f-b286-24ff1a4ef81f";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

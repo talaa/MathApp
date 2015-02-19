@@ -200,7 +200,7 @@
     if ([[segue identifier] isEqualToString:@"operationsegue"]) {
         //[[segue destinationViewController] setDelegate:self];
         OperationsViewController *detailcontroller=(OperationsViewController*)[segue destinationViewController];
-        detailcontroller.title=[NSString stringWithFormat:@"Level %i",indexpath.row+1];
+        detailcontroller.title=[NSString stringWithFormat:@"Level %li",indexpath.row+1];
         [tempObjects setoperationtype:self.title];
         [tempObjects setmainindex:indexpath.row];
         //[self presentViewController:detailcontroller animated:YES completion:nil];

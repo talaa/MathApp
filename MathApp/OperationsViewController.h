@@ -22,9 +22,13 @@
 #import "Divisionoperations.h"
 #import "tempObjects.h"
 #import "GADBannerView.h"
+#import <StartApp/StartApp.h>
 @class Scorecards;
 @interface OperationsViewController : UIViewController<MFMailComposeViewControllerDelegate,UIAlertViewDelegate>{
 GADBannerView *bannerView_;
+    
+        STABannerView* bannerView;
+    
 }
 @property(nonatomic,strong) IBOutlet UILabel *generatedstring;
 @property(nonatomic,strong) IBOutlet UILabel *scorestring;

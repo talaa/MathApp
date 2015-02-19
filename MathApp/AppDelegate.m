@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import <StartApp/StartApp.h>
+#define DevID @"102387467"
+#define AppID @"202436145"
+
 
 @implementation AppDelegate
 
@@ -20,6 +24,9 @@
     
     // Replace YOUR_API_KEY with the api key in the downloaded package
     [Flurry startSession:@"WGQJWJ4DDV9PCQVMZ6DD"];
+    STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
+    sdk.devID = DevID;
+    sdk.appID = AppID;
     return YES;
 }
 							

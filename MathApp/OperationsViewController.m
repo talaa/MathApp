@@ -10,6 +10,7 @@
 #include "AMRatingControl.h"
 #import "Scorecards.h"
 #import "Flurry.h"
+#import "PlayMusic.h"
 
 @interface OperationsViewController ()
 @property (nonatomic,strong)NSString *operationstype;
@@ -37,16 +38,18 @@
 {
     [super viewDidLoad];
 
+    confirmbutton.hidden=YES;
     
     // Do any additional setup after loading the view.
     //Show the alertview
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     if (![defaults boolForKey:KNoads]) {
-        [self setupads];
+        //[self setupads];
+        [self setupnewads];
     }
     if (![defaults objectForKey:@"firsttime"]) {
         UIAlertView *Explainview=[[UIAlertView alloc]initWithTitle:@"How to " message:@"Once you finish answering , Press 'Confirm'.\n To move to next Question , Press 'Next'.\n To go Back , Press 'Back' " delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK",@"Don't Show this Again", nil];
-        [Explainview show];
+        //[Explainview show];
 
     }
     
@@ -87,7 +90,8 @@
     // Available AdSize constants are explained in GADAdSize.h.
     bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        [bannerView_ setAdSize:kGADAdSizeFullBanner];
+        //[bannerView_ setAdSize:kGADAdSizeFullBanner];
+        [bannerView_ setAdSize:kGADAdSizeSmartBannerPortrait];
         
     }
     
@@ -105,13 +109,25 @@
 
 
 }
+-(void)setupnewads{
+    if (bannerView == nil) {
+        bannerView = [[STABannerView alloc] initWithSize:STA_AutoAdSize autoOrigin:STAAdOrigin_Bottom
+                                                withView:self.view withDelegate:nil];
+        [self.view addSubview:bannerView];
+    }
 
+
+
+
+
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 -(IBAction)Checkthecalculation:(id)sender{
+    /*
     [results resignFirstResponder];
     NSInteger resultsint=[results.text integerValue];
     NSInteger realresults=0;
@@ -133,14 +149,55 @@
         internalscore++;
         if (trialnumber==10) {
             NSLog(@"end of line for this game");
+            
         }
     }else{
         NSLog(@"Try Again ");
 
     
     }
+   
     confirmbutton.enabled=NO;
     [self updatemyscorelabel];
+*/
+    [self adjustementbutton];
+}
+
+-(void)adjustementbutton{
+    [results resignFirstResponder];
+    NSInteger resultsint=[results.text integerValue];
+    NSInteger realresults=0;
+    if ([[tempObjects operationtype]isEqualToString:@"Add"]) {
+        realresults=[Addoperations score];
+    }
+    if ([[tempObjects operationtype]isEqualToString:@"Minus"]) {
+        realresults=[Minusoperations score];
+    }
+    if ([[tempObjects operationtype]isEqualToString:@"Multiply"]) {
+        realresults=[Multiplyoperations score];
+    }
+    if ([[tempObjects operationtype]isEqualToString:@"Division"]) {
+        realresults=[Divisionoperations score];
+    }
+    
+    if (resultsint==realresults ) {
+        NSLog(@"yeaaa good work");
+        internalscore++;
+        if (trialnumber==10) {
+            NSLog(@"end of line for this game");
+            
+        }
+    }else{
+        NSLog(@"Try Again ");
+        
+        
+    }
+    
+    confirmbutton.enabled=NO;
+    [self updatemyscorelabel];
+
+
+
 
 }
 -(void)startthepage{
@@ -174,7 +231,7 @@
 
     CGPoint AMRcenter;
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        AMRcenter=CGPointMake(200, 750);
+        AMRcenter=CGPointMake(200, 700);
     
     }else{
         AMRcenter=CGPointMake(60, 400);
@@ -195,7 +252,7 @@
 
 }
 -(IBAction)next:(id)sender{
-    
+    [self adjustementbutton];
     //Dont forget to modify it to 10 again 
     if (trialnumber<10) {
         trialnumber++;
@@ -206,6 +263,8 @@
         nextbutton.enabled=NO;
     UIAlertView *endoflinealert=[[UIAlertView alloc]initWithTitle:@"Done !" message:@"You have finished 10 tests of this level" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Send mail to parent", nil];
     [endoflinealert show];
+        [[PlayMusic sharedInstance]playMusicFileFromMainBundle:@"cheering.mp3"];
+        [[PlayMusic sharedInstance]setupNumberOfLoops:1];
         //NSLog(@"The type is %@ & the level is %i",[tempObjects tempoarray][[tempObjects indexrow]],[tempObjects indexrow]);
         if (recordavailable) {
             Scorecards *modifyrecord=therecord[0];
@@ -221,7 +280,11 @@
             NSTimeInterval timediff=[[NSDate date] timeIntervalSinceDate:starttime];
             newscore.timetocomplete=[NSNumber numberWithDouble:timediff];
         }
-        NSMutableDictionary *flurrydic=[[NSMutableDictionary alloc]initWithObjectsAndKeys:[tempObjects operationtype],@"Operation Type",[tempObjects indexrow],@"Operation Level",internalscore,@"Operation score", nil];
+        //NSLog(@"operation type %@ , operation level:%i, score %i ",[tempObjects operationtype],[tempObjects indexrow],internalscore);
+        NSString *dd=[tempObjects operationtype];
+        NSNumber *badr=[NSNumber numberWithInt:[tempObjects indexrow]];
+        NSDictionary *flurrydic=[[NSDictionary alloc]initWithObjectsAndKeys:dd,@"OperationType",badr,@"OperationLevel",[NSNumber numberWithInt:internalscore],@"Operationscore", nil];
+        NSLog(@"dictiannry is :%@",flurrydic);
         [Flurry logEvent:@"log operation" withParameters:flurrydic timed:YES];
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
             if (success) {
@@ -252,7 +315,7 @@
     //NSArray *tomail=[[NSArray alloc]initWithObjects:[self.detailItem valueForKey:@"email"], nil];
     MFMailComposeViewController *picker=[[MFMailComposeViewController alloc]init];
     picker.mailComposeDelegate=self;
-    [picker setSubject:@"Query About Event" ];
+    [picker setSubject:@"New Score in Math App "];
     [picker setToRecipients:@[[defaults objectForKey:KDademail],[defaults objectForKey:KMumemail]]];
     NSString *messagebody=[[NSString alloc]init];
     if ([defaults boolForKey:Kshowttf]) {
@@ -282,6 +345,7 @@
 -(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
     
     [controller dismissViewControllerAnimated:YES completion:nil];
+    [[PlayMusic sharedInstance]stop];
     
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
