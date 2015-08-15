@@ -70,7 +70,6 @@
 		699563F419AD3199005078B0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699563F319AD3199005078B0 /* AVFoundation.framework */; };
 		699563F619AD31AE005078B0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699563F519AD31AE005078B0 /* CoreTelephony.framework */; };
 		699563F819AD31CB005078B0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699563F719AD31CB005078B0 /* SystemConfiguration.framework */; };
-		699563FC19AD37B9005078B0 /* libFlurry_5.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 699563FB19AD37B9005078B0 /* libFlurry_5.3.0.a */; };
 		699FC6E5199D1F2F001272B4 /* Minusoperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 699FC6E4199D1F2F001272B4 /* Minusoperations.m */; };
 		699FC6E8199D47CE001272B4 /* Multiplyoperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 699FC6E7199D47CE001272B4 /* Multiplyoperations.m */; };
 		699FC6EB199D47E5001272B4 /* Divisionoperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 699FC6EA199D47E5001272B4 /* Divisionoperations.m */; };
@@ -82,6 +81,7 @@
 		69B73C2C19D5EE500079C2EA /* cheering.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69B73C2B19D5EE500079C2EA /* cheering.mp3 */; };
 		69B73C2F19D5EE750079C2EA /* PlayMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B73C2E19D5EE750079C2EA /* PlayMusic.m */; };
 		69C8E8AA19A8DADF005B0EB8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C8E8A919A8DADF005B0EB8 /* StoreKit.framework */; };
+		69F86B951AE1736F00F265E5 /* libFlurry_6.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F86B941AE1736F00F265E5 /* libFlurry_6.3.0.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,8 +229,6 @@
 		699563F319AD3199005078B0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		699563F519AD31AE005078B0 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		699563F719AD31CB005078B0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		699563FA19AD37B9005078B0 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		699563FB19AD37B9005078B0 /* libFlurry_5.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.3.0.a; sourceTree = "<group>"; };
 		699FC6E3199D1F2F001272B4 /* Minusoperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Minusoperations.h; path = ../Minusoperations.h; sourceTree = "<group>"; };
 		699FC6E4199D1F2F001272B4 /* Minusoperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Minusoperations.m; path = ../Minusoperations.m; sourceTree = "<group>"; };
 		699FC6E6199D47CE001272B4 /* Multiplyoperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Multiplyoperations.h; path = ../Multiplyoperations.h; sourceTree = "<group>"; };
@@ -249,6 +247,8 @@
 		69B73C2D19D5EE750079C2EA /* PlayMusic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayMusic.h; sourceTree = "<group>"; };
 		69B73C2E19D5EE750079C2EA /* PlayMusic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayMusic.m; sourceTree = "<group>"; };
 		69C8E8A919A8DADF005B0EB8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		69F86B931AE1736F00F265E5 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		69F86B941AE1736F00F265E5 /* libFlurry_6.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_6.3.0.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				699563F819AD31CB005078B0 /* SystemConfiguration.framework in Frameworks */,
+				69F86B951AE1736F00F265E5 /* libFlurry_6.3.0.a in Frameworks */,
 				699563F619AD31AE005078B0 /* CoreTelephony.framework in Frameworks */,
 				699563F419AD3199005078B0 /* AVFoundation.framework in Frameworks */,
 				6959EC3C1A9648B100A082F4 /* StartApp.framework in Frameworks */,
@@ -267,7 +268,6 @@
 				69A6B1F8199D764300FF224E /* MessageUI.framework in Frameworks */,
 				6957F90D19A2464900925DA3 /* CoreData.framework in Frameworks */,
 				6983FF0B199BEAB200CFCBA5 /* QuartzCore.framework in Frameworks */,
-				699563FC19AD37B9005078B0 /* libFlurry_5.3.0.a in Frameworks */,
 				69908D551997A95400E78A12 /* CoreGraphics.framework in Frameworks */,
 				69908D571997A95400E78A12 /* UIKit.framework in Frameworks */,
 				69908D531997A95400E78A12 /* Foundation.framework in Frameworks */,
@@ -451,9 +451,9 @@
 		69908D581997A95400E78A12 /* MathApp */ = {
 			isa = PBXGroup;
 			children = (
+				69F86B921AE1736F00F265E5 /* Flurry */,
 				6959EC391A96488A00A082F4 /* 3rd party */,
 				69B73C3019D5EE860079C2EA /* Music */,
-				699563F919AD37B9005078B0 /* Flurry */,
 				699563CB19AD30F2005078B0 /* GoogleMobileAdsSdkiOS-6.11.1 */,
 				69C8E8A219A87C65005B0EB8 /* operations */,
 				6957F8B419A245FF00925DA3 /* MagicalRecord */,
@@ -590,15 +590,6 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		699563F919AD37B9005078B0 /* Flurry */ = {
-			isa = PBXGroup;
-			children = (
-				699563FA19AD37B9005078B0 /* Flurry.h */,
-				699563FB19AD37B9005078B0 /* libFlurry_5.3.0.a */,
-			);
-			path = Flurry;
-			sourceTree = "<group>";
-		};
 		69B73C3019D5EE860079C2EA /* Music */ = {
 			isa = PBXGroup;
 			children = (
@@ -623,6 +614,15 @@
 			);
 			name = operations;
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		69F86B921AE1736F00F265E5 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				69F86B931AE1736F00F265E5 /* Flurry.h */,
+				69F86B941AE1736F00F265E5 /* libFlurry_6.3.0.a */,
+			);
+			path = Flurry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -670,7 +670,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = SpringMoon;
+				ORGANIZATIONNAME = "Bluewave Solutions";
 				TargetAttributes = {
 					69908D4E1997A95400E78A12 = {
 						DevelopmentTeam = 6VJ733SKX8;
@@ -866,7 +866,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -899,7 +899,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -920,6 +920,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathApp/MathApp-Prefix.pch";
 				INFOPLIST_FILE = "MathApp/MathApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MathApp/GoogleMobileAdsSdkiOS-6.11.1",
@@ -946,6 +947,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathApp/MathApp-Prefix.pch";
 				INFOPLIST_FILE = "MathApp/MathApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MathApp/GoogleMobileAdsSdkiOS-6.11.1",
